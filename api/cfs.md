@@ -2933,8 +2933,8 @@ Update the state for a collection of components in the cfs database
 > Body parameter
 
 ```json
-[
-  {
+{
+  "patch": {
     "id": "string",
     "state": [
       {
@@ -2958,15 +2958,22 @@ Update the state for a collection of components in the cfs database
       "property1": "string",
       "property2": "string"
     }
+  },
+  "filters": {
+    "ids": "string",
+    "status": "unconfigured",
+    "enabled": true,
+    "configName": "string",
+    "tags": "string"
   }
-]
+}
 ```
 
 <h3 id="put_components_v2-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[V2ComponentStateArray](#schemav2componentstatearray)|true|The configuration/state for an array of components|
+|body|body|any|true|The configuration/state for an array of components|
 
 > Example responses
 
@@ -3943,8 +3950,8 @@ Update the state for a collection of components in the cfs database
 > Body parameter
 
 ```json
-[
-  {
+{
+  "patch": {
     "id": "string",
     "state": [
       {
@@ -3970,15 +3977,22 @@ Update the state for a collection of components in the cfs database
       "property1": "string",
       "property2": "string"
     }
+  },
+  "filters": {
+    "ids": "string",
+    "status": "unconfigured",
+    "enabled": true,
+    "config_name": "string",
+    "tags": "string"
   }
-]
+}
 ```
 
 <h3 id="put_components_v3-parameters">Parameters</h3>
 
 |Name|In|Type|Required|Description|
 |---|---|---|---|---|
-|body|body|[V3ComponentDataArray](#schemav3componentdataarray)|true|The configuration/state for an array of components|
+|body|body|any|true|The configuration/state for an array of components|
 
 > Example responses
 
@@ -7737,26 +7751,6 @@ A collection of configuration data.
 |configurations|[[V3ConfigurationData](#schemav3configurationdata)]|false|none|[A collection of ConfigurationLayers.]|
 |next|[V3NextData](#schemav3nextdata)|false|none|Information for requesting the next page of data|
 
-<h2 id="tocS_ComponentId">ComponentId</h2>
-<!-- backwards compatibility -->
-<a id="schemacomponentid"></a>
-<a id="schema_ComponentId"></a>
-<a id="tocScomponentid"></a>
-<a id="tocscomponentid"></a>
-
-```json
-"string"
-
-```
-
-The component's id. e.g. xname for hardware components
-
-### Properties
-
-|Name|Type|Required|Restrictions|Description|
-|---|---|---|---|---|
-|*anonymous*|string|false|none|The component's id. e.g. xname for hardware components|
-
 <h2 id="tocS_V2ComponentsFilter">V2ComponentsFilter</h2>
 <!-- backwards compatibility -->
 <a id="schemav2componentsfilter"></a>
@@ -7959,7 +7953,7 @@ The configuration state and desired state for a component.
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|id|[ComponentId](#schemacomponentid)|false|none|The component's id. e.g. xname for hardware components|
+|id|string|false|none|The component's id. e.g. xname for hardware components|
 |state|[[V2ConfigurationStateLayer](#schemav2configurationstatelayer)]|false|none|Information about the desired config and status of the layers|
 |stateAppend|object|false|write-only|A single state that will be appended to the list of current states.|
 |» cloneUrl|string|false|none|The clone URL of the configuration content repository.|
@@ -8041,7 +8035,7 @@ The configuration state and desired state for a component.
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|id|[ComponentId](#schemacomponentid)|false|none|The component's id. e.g. xname for hardware components|
+|id|string|false|none|The component's id. e.g. xname for hardware components|
 |state|[[V3ConfigurationStateLayer](#schemav3configurationstatelayer)]|false|none|Information about the desired config and status of the layers|
 |state_append|object|false|write-only|A single state that will be appended to the list of current states.|
 |» clone_url|string|false|none|The clone URL of the configuration content repository.|
@@ -8279,7 +8273,7 @@ A collection of component ids.
 
 |Name|Type|Required|Restrictions|Description|
 |---|---|---|---|---|
-|component_ids|[[ComponentId](#schemacomponentid)]|false|none|[The component's id. e.g. xname for hardware components]|
+|component_ids|[string]|false|none|none|
 
 <h2 id="tocS_V2ComponentsUpdate">V2ComponentsUpdate</h2>
 <!-- backwards compatibility -->
