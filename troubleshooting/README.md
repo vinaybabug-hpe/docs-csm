@@ -71,6 +71,7 @@ to the exiting problem seen into the existing search. (The example searches for 
 * [IMS image delete loses the `arch` information](known_issues/ims_image_delete_loses_arch.md)
 * [Spire pods stuck in `PodInitializing`](known_issues/spire_pod_initializing.md)
 * [CFS Component With Zero-Length ID](known_issues/CFS_Component_With_Zero_Length_ID.md)
+* [IMS Remote Node Image Build Failure](known_issues/ims_remote_node_image_build_failure.md)
 
 ## Booting
 
@@ -149,6 +150,7 @@ to the exiting problem seen into the existing search. (The example searches for 
 * [Issues with Redfish Endpoint `DiscoveryCheck` for Redfish Events from Nodes](../operations/node_management/Troubleshoot_Issues_with_Redfish_Endpoint_Discovery.md)
 * [Interfaces with IP Address Issues](../operations/node_management/Troubleshoot_Interfaces_with_IP_Address_Issues.md)
 * [Loss of Console Connections and Logs on Gigabyte Nodes](../operations/node_management/Troubleshoot_Loss_of_Console_Connections_and_Logs_on_Gigabyte_Nodes.md)
+* [Image projection inconsistent across nodes](image_projection_inconsistent_across_nodes.md)
 
 ## Security and authentication
 
